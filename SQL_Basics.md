@@ -1,0 +1,34 @@
+# SQL = Structured Query Language
+
+It's not a programming language rather it's more like a declarative language. We don't tell it to do something step by step; rather we tell it the results we want. The database engine figures out the fastest way to do it. 
+
+## It is a realtional model because:
+
+1. The central idea is "why".
+2. Organises data into tables (also called relations).
+3. Has a fixed set of *columns (fields)*, each with a declared data type.
+4. Holds any number of *rows (records)*, each one being one real thing.
+
+## Keys
+
+1. **Primary:** A column or combo of columns that uniquely identifies each row.
+2. **Foreign:** A column in one table that points to the primary key of anoter table.
+
+*This matters because it's what makes SQL fundamentally different from a spreadsheet or CSV: instead of duplicating a product's full details in every row that references it, you store it once and reference it. That eliminates duplication and inconsistency (imagine updating a price in 40 different CSV rows manually vs. one row in products).*
+
+## The four "categories" of SQL commands
+
+1. **DDL (Definition): **CREATE, ALTER, DROP** define the structure -- tables, columns, types.
+2. **DML (Manipulation):** **INSERT, UPDATE, DELETE** chamge the data inside the table.
+3. **DQL (Query): SELECT** reads/ retreives data.
+4. **DCL/TCL (Control): GRANT, COMMIT and SELECT** are used for permissions and multi-step atomic operations.
+
+## Commonly used data types:
+
+1. **INTEGER/SERIAL :** Whole numbers/ SERIAL -> Auto incrementing integer in Postgres.
+2. **TEXT :** Unlimited length.
+3. **VARCHAR(n) :** Capped at n characters.
+4. **NUMERIC(p,s) :** Exact decimal numbers, critical for money (p = total digits, s = digits after the decimal point).
+5. **BOOLEAN :** True/False.
+6. **TIMESTAMP :** date+time.
+
