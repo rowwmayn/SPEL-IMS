@@ -18,7 +18,7 @@ It's not a programming language rather it's more like a declarative language. We
 
 ## The four "categories" of SQL commands
 
-1. **DDL (Definition): **CREATE, ALTER, DROP** define the structure -- tables, columns, types.
+1. **DDL (Definition): CREATE, ALTER, DROP** define the structure -- tables, columns, types.
 2. **DML (Manipulation):** **INSERT, UPDATE, DELETE** chamge the data inside the table.
 3. **DQL (Query): SELECT** reads/ retreives data.
 4. **DCL/TCL (Control): GRANT, COMMIT and SELECT** are used for permissions and multi-step atomic operations.
@@ -31,4 +31,43 @@ It's not a programming language rather it's more like a declarative language. We
 4. **NUMERIC(p,s) :** Exact decimal numbers, critical for money (p = total digits, s = digits after the decimal point).
 5. **BOOLEAN :** True/False.
 6. **TIMESTAMP :** date+time.
+
+## Creating Table:
+
+CREATE TABLE table_name (
+
+    column definitions
+
+);
+
+## Inserting Data to Table
+
+### Single Row
+INSERT INTO table_name (column1, column2, column3)
+VALUES (value1, value2, value3);
+
+### Multi Row
+INSERT INTO table_name (col1, col2) VALUES
+  (val1, val2),
+  (val1, val2),
+  (val1, val2);
+
+**SELECT * FROM TABLE_NAME;** -> Selects all tables.
+**SELECT OMUK, TOMUK, SHAMUK FROM TABLE_NAME;** -> Selects the selected columsn
+**SELECT columns FROM table_name ORDER BY column_name;** -> By default, this sorts ascending (smallest → largest for numbers, A→Z for text). To reverse it, add DESC (descending) at the end.
+
+## Updating Data
+**UPDATE** table_name
+**SET** column1 = value1
+**WHERE** condition;
+
+## Deleting Data
+
+**DELETE FROM** table_name **WHERE** condition;
+*Run the SELECT with the same WHERE first to confirm exactly what you're about to delete.*
+
+## Reading Practice: 
+
+**SELECT model, price_tk FROM products WHERE stock_qty > 0 ORDER BY price_tk DESC;**
+Is read as "give me model and price for anything in stock, most expensive first."
 
