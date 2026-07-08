@@ -1,5 +1,7 @@
 # SQL = Structured Query Language
 
+`npm install pg` -> Installs PostGres for Next.JS
+
 It's not a programming language rather it's more like a declarative language. We don't tell it to do something step by step; rather we tell it the results we want. The database engine figures out the fastest way to do it. 
 
 ## It is a realtional model because:
